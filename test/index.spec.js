@@ -5,10 +5,31 @@ import login from '../src/views/login';
 import feed from '../src/views/feed';
 import { signUpUser, loginUser, loginWithGoogle, validateUserSession } from '../src/lib/auth'; // auth.js
 
+jest.mock('../src/views/signUp.js', () => ({ signUpUser: () => Promise.resolve() }));
+
+// signUpUser; jest.fn().mockImplementation(() => Promise.resolve())
+const navigateTo = jest.fn();
+
+/* --------- singUp.js --------------*/
+
+describe('miFuncion', () => {
+  it('debería ser una función', () => {
+    expect(typeof signUpUser).toBe('function');
+  });
+});
+
 /* --------- home.js --------------*/
 describe('home', () => {
   it('debería ser una función', () => {
     expect(typeof home).toBe('function');
+  });
+});
+
+describe('Prueba de boton en home', () => {
+  it('debería ser una función', () => {
+    document.body.appendChild(home(navigateTo));
+    document.querySelector('#button').click();
+    expect(navigateTo).toHaveBeenCalledWith('/login');
   });
 });
 

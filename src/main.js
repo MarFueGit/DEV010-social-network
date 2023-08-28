@@ -57,3 +57,5 @@ onAuthStateChanged(getAuth(), (user) => {
     navigateTo('/login');
   }
 });
+
+export default navigateTo;

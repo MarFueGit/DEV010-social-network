@@ -1,8 +1,8 @@
-import { getDocs, collection, query, onSnapshot, orderBy } from 'firebase/firestore';
+import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
 // import { onAuthStateChanged } from 'firebase/auth';
-import { auth, db } from '../firebase.js';
+import { db } from '../firebase.js';
 // eslint-disable-next-line import/no-unresolved
-import { setUpPosts } from './post.js';
+// import { setUpPosts } from './post.js';
 import addPost from './addPost.js'; // textarea y botón de submit
 
 function feed(/* navigateTo */) {
