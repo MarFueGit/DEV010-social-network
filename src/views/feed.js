@@ -32,19 +32,6 @@ function feed(/* navigateTo */) {
     section.appendChild(sectionPosts);
     return section;
   });
-  // onAuthStateChanged(auth, async (user) => {
-  //   if (user) {
-  //     addPost();
-  //     const querySnapshot = await getDocs(collection(db, 'Post'));
-  //     const posts = setUpPosts(querySnapshot.docs);
-  //     section.append(posts);
-  //   } else {
-  //     setUpPosts([]);
-  //     const p = document.createElement('p');
-  //     p.textContent = 'Sign in to see posts.';
-  //     section.append(p);
-  //   }
-  // });
 
   return section;
 }

@@ -21,8 +21,6 @@ export const setUpPosts = (data) => {
     const h3 = document.createElement('h3');
     h3.textContent = 'There are not post to show';
     section.append(h3);
-    // ul.append(h3);
-    // section.append(ul);
   }
   return section;
 };

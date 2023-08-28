@@ -6,9 +6,10 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../firebase';
-
+// Funcion para crear nuevos usuarios, recibe el email y la contraseña
 const signUpUser = async (email, password) => {
   try {
+    // Invocamos al servicio de firebase
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
@@ -30,9 +31,10 @@ const signUpUser = async (email, password) => {
     return undefined;
   }
 };
-
+// Funcion para loguear usuario, recibe email y contraseña
 const loginUser = async (email, password) => {
   try {
+    // Invocamos el servicio de firebase
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
@@ -74,11 +76,13 @@ const validateUserSession = (navigateTo) => {
   // Este observador de firebase nos sirve para validar si el usuario ya habia iniciado sesion
   // o ya se habia registrado, en este caso navegamos a feed.
   onAuthStateChanged(auth, (user) => {
-    if (user != null) {
+    if (user && window.location.pathname === '/feed') {
+      // que no mande siempre a feed con usuario logeado
       navigateTo('/feed');
-    } else {
-      // Si el usuario no tiene sesion activa, navegamos a onboardin
-      navigateTo('/');
+    } else if (!user && window.location.pathname === '/feed') {
+      // que no mande siempre a login sin usuario logeado
+      alert('Please, sign in to see posts');
+      navigateTo('/login');
     }
   });
 };

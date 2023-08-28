@@ -51,5 +51,8 @@
     "singleQuote": true,
     "semi": true,
     "trailingComma": "all"
-  }
+  },
+  "jest":{
+    "testEnvironment": "jsdom"
+}
 }
