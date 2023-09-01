@@ -1,11 +1,11 @@
-import { signUpUser } from '../../../../src/lib/auth';
+import { loginUser } from '../../../../src/lib/auth';
 
 beforeEach(() => {
   jest.resetModules();
 });
 
 jest.mock('firebase/auth', () => ({
-  createUserWithEmailAndPassword: () =>
+  signInWithEmailAndPassword: () =>
     // Retornamos un error con throw para causar que entre en el cath
     new Promise(() => {
       throw { code: true };
@@ -18,9 +18,9 @@ Realizamos el mock de la funcion alert
 global.alert = jest.fn();
 
 describe('lib auth', () => {
-  it('signUpUser error default', () => {
+  it('loginUser error default', () => {
     try {
-      signUpUser();
+      loginUser();
     } catch (error) {
       expect(error).toBe('');
     }

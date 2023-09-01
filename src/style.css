@@ -29,9 +29,9 @@
   width: 15vw;
   height: 5vh;
   left: 70%;
- top: 20px;
+  top: 20px;
   border-radius: 10px;
-  background-color:#00bcd4;
+  background-color: #00bcd4;
   position: absolute;
   color: white;
   border: none;
@@ -322,7 +322,6 @@ input {
 /*-------- Comienza estilo de feed------------*/
 
 .divTitle {
-  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
@@ -332,11 +331,10 @@ input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.sectionPosts{
+.sectionPosts {
   margin: 5%;
   height: 100%;
 }
-
 
 .header {
   position: relative;
@@ -352,13 +350,11 @@ input {
 
 .individual-post {
   margin: 10px;
-  /*margin-bottom: 50px;*/
   padding: 10px;
   border-width: 1px;
   border-style: solid;
-  border-color: black;  
+  border-color: black;
 }
-
 .img3 {
   width: 100%;
   max-width: 80px;
@@ -368,21 +364,20 @@ input {
   right: 8%;
 }
 
-.likeButton{
+.likeButton {
   width: 100%;
   max-width: 30px;
-
 }
 
 .likeContainer {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   gap: 2%;
-   padding: 0 1px 3% 0 ;
-   margin-top: 5px;
-   margin-bottom: 10px;
-   margin-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  padding: 0 1px 3% 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 30px;
 }
 
 /* Empieza responsive  de feed*/
@@ -397,30 +392,28 @@ input {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-  
 }
 
 /* ---------Estilos de addPost ------------*/
-.postContainer{
+.postContainer {
   display: flex;
   flex-direction: column;
 }
 
-.sizeSelect{
+.sizeSelect {
   width: 100%;
   max-width: 90px;
   height: 40px;
-  margin-left: 70%; 
+  margin-left: 70%;
   font-size: 16px;
-
 }
 
-.sizeSelect:hover{
+.sizeSelect:hover {
   background-color: #00bcd4;
   width: 100%;
   max-width: 90px;
   height: 40px;
-  margin-left: 70%; 
+  margin-left: 70%;
   color: white;
 }
 
@@ -428,22 +421,22 @@ input {
   width: 100%;
   max-width: 90px;
   height: 40px;
-  margin-left: 70%; 
+  margin-left: 70%;
   font-size: 16px;
 }
 .textPost {
   margin: 10px;
-  /*margin-bottom: 50px;*/
+  /* margin-bottom: 50px; */
   padding: 10px;
   width: 95%;
-  height:80px ;
+  height: 80px;
   border-width: 1px;
   border-style: solid;
-  border-color: black; 
-  font-size: 20px; 
+  border-color: black;
+  font-size: 20px;
 }
 
-.textPost::placeholder{
+.textPost::placeholder {
   font-size: 16px;
 }
 
@@ -479,7 +472,6 @@ footer {
   height: 100%;
   max-width: 500px;
   width: 100%;
-  
 }
 
 .navigation-buttons {
@@ -505,6 +497,5 @@ footer {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    
   }
 }

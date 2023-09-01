@@ -51,7 +51,7 @@ function resetPassword(navigateTo) {
   input.setAttribute('id', 'reset-password');
   input.setAttribute('type', 'email');
   input.setAttribute('name', 'email');
-  input.setAttribute('placeholder', 'White your email');
+  input.setAttribute('placeholder', 'Write your email');
   input.setAttribute('data-testid', 'input-reset');
   input.setAttribute('required', '');
   form.appendChild(input);

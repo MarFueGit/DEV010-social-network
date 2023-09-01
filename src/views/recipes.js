@@ -10,7 +10,7 @@ function recipes(navigateTo) {
   img3.className = 'img3';
   img3.src = '../assets/img/logo-vitalhub.png';
   img3.alt = 'logo vitalHub';
-  header.append(title,img3);
+  header.append(title, img3);
   const footer = document.createElement('footer');
   footer.appendChild(navigationBar(navigateTo));
   divTitle.append(header, footer);

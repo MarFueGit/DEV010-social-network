@@ -44,7 +44,6 @@ const loginUser = async (email, password) => {
 
     return userCredential;
   } catch (error) {
-    console.log(error);
     if (error.code === 'auth/wrong-password') {
       alert('Your password is wrong, please try again');
     } else if (error.code === 'auth/user-not-found') {
@@ -67,8 +66,6 @@ const loginWithGoogle = async () => {
 
     return userCredential;
   } catch (error) {
-    console.log(error);
-
     return undefined;
   }
 };
@@ -96,8 +93,6 @@ const resetPasswordUser = async (email) => {
     await sendPasswordResetEmail(auth, email);
     return true;
   } catch (error) {
-    console.log(error);
-
     return undefined;
   }
 };
