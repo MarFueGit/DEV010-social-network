@@ -36,17 +36,6 @@ function addPost() {
     e.preventDefault();
     if (textarea.value !== '') {
       if (select.selectedIndex === 0) {
-        // const typeDialog = document.createElement('dialog');
-        // const closeButton = document.createElement('button');
-        // const p = document.createElement('p');
-        // p.textContent = 'Please select a type post';
-        // closeButton.textContent = 'Ok';
-        // typeDialog.append(p, closeButton);
-        // section.appendChild(typeDialog);
-        // typeDialog.showModal();
-        // closeButton.addEventListener('click', () => {
-        //   typeDialog.close();
-        // });
         const content = 'Please select a type post';
         section.append(toast(content));
         // alert('Please select a type post');

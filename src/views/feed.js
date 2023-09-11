@@ -8,20 +8,15 @@ import {
   arrayRemove,
   arrayUnion,
 } from 'firebase/firestore';
-// import { updateCurrentUser } from 'firebase/auth';
 import { db, auth } from '../firebase.js';
 import addPost from './addPost.js'; // textarea y botón de submit
 import navigationBar from './navigationBar.js';
-// import toast from './toast.js';
 
 function feed(navigateTo) {
   const user = auth?.currentUser; // usuario loggeado
   const userID = user?.uid;
-  console.log(userID);
   const divTitle = document.createElement('div'); // body del feed o contenedor padre
   if (!user) {
-    // const content = 'Log in to see profile';
-    // divTitle.append(toast(content));
     alert('Log in to see profile');
     navigateTo('/login');
   } else {
@@ -38,9 +33,7 @@ function feed(navigateTo) {
     const img3 = document.createElement('img');
     img3.classList.add('img3');
     img3.src = '../assets/img/logo-vitalhub.png';
-    // img3.setAtributte('src', '../assets/img/logo-vitalhub.png')
     img3.alt = 'logo vitalHub';
-    // img3.setAtributte('alt', 'logo vitalHub')
     const footer = document.createElement('footer');
     header.append(titleFeed, img3);
 
@@ -94,11 +87,8 @@ function feed(navigateTo) {
           // sino esta vacio, le ponemos el conteo de likes
           likesCount.textContent = likesArray.length;
         }
-        // Likes = ["812", "23"]
-
         likeButton.addEventListener('click', async (e) => {
           e.preventDefault();
-          // eslint-disable-next-line no-plusplus
           if (likesArray.includes(userID)) {
             // si el usuario ya dio like
             await updateDoc(doc.ref, {
@@ -112,8 +102,6 @@ function feed(navigateTo) {
             // si el usuario no ha dado like
             // likesArray.push(userID); // se añade userID a array de likes del post
             await updateDoc(doc.ref, { Likes: arrayUnion(userID) });
-            // console.log(doc.data.Likes());
-            // console.log(doc.data.Likes().length);
             likesCount.textContent = likesArray.length; // se actualiza textcontent
           }
           // Aquí implementar la lógica para incrementar un contador de likes
@@ -131,7 +119,6 @@ function feed(navigateTo) {
           const deleteOption = document.createElement('option'); // opción de borrar
           const placeholderOption = document.createElement('option'); // placeholder
           placeholderOption.textContent = '...';
-          // placeholderOption.disabled = true;
           editOption.textContent = 'Edit post';
           deleteOption.textContent = 'Delete post';
 
@@ -154,7 +141,6 @@ function feed(navigateTo) {
               saveButton.addEventListener('click', async () => {
                 // listener botón de guardar para acualizar el registro firebase
                 await updateDoc(doc.ref, { Content: textarea.value }); // se actualiza el contenido
-                // await doc.updateDoc({ Content: textarea.value });
                 onePost.removeChild(editSection); // se elimina textarea y botón del post
                 selectPost.selectedIndex = 0; // se regresa el desplegable a la opción '...'
               });
