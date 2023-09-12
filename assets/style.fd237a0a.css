@@ -1,0 +1,823 @@
+/* estilos de onboarding  */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #e5e8e8;
+  background: #f8f9f9;
+  border-radius: 8px;
+  position: relative;
+}
+
+#button {
+  width: 15vw;
+  height: 5vh;
+  left: 80%;
+  top: 20px;
+  border-radius: 10px;
+  background-color: #00bcd4;
+  position: absolute;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.img3 {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  position: absolute;
+  object-fit: cover;
+  right: 8%;
+}
+.home-container .img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h2,
+h3 {
+  font-size: 7vw;
+  padding: 30px;
+  color: #00bcd4;
+}
+.welcome {
+  color: #00bcd4;
+  font-size: 8vw;
+}
+p {
+  font-size: 5vw;
+  color: #00bcd4;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  padding: 0 10% 0 10%;
+  object-fit: cover;
+}
+
+/* Responsive  Desktop*/
+@media (min-width: 768px) {
+  body {
+    background-image: url('./assets/img/img-fondo\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .img {
+    max-width: 100%;
+    height: 250px;
+  }
+  h3 {
+    font-size: 2vw;
+  }
+  .welcome {
+    font-size: 2vw;
+  }
+  p {
+    font-size: 1.5vw;
+    margin-top: 20px;
+  }
+
+  .home-container {
+    width: 100%;
+    max-width: 40%;
+    height: 90vh;
+    margin-top: 40px;
+    margin-left: 30%;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  #button {
+    width: 5vw;
+    height: 5vh;
+    border-radius: 10px;
+  }
+}
+/* termina onboarding */
+
+/* Inicia estilos login */
+
+.login-container,
+.contraseña-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  border: 1px solid #e5e8e8;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9f9;
+  position: relative;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  object-fit: cover;
+}
+#login-form,
+#contraseña-form {
+  display: grid;
+  text-align: center;
+}
+label {
+  display: block;
+  text-align: left;
+}
+input::placeholder {
+  text-align: center;
+  font-weight: bolder;
+}
+
+input {
+  background-color: #d6dbdf;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 6px;
+  width: 300px;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.button-login,
+.button-google {
+  width: 100%;
+  max-width: 100%;
+  height: 6vh;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  background: #d6dbdf;
+}
+.button-google:hover {
+  background: #00bcd4;
+}
+.button-login {
+  background: #00bcd4;
+}
+.fa-google {
+  position: absolute;
+  left: 30px;
+  color: #00bcd4;
+  font-size: 16px;
+}
+.fa-google:hover {
+  color: black;
+}
+.paragraf {
+  margin-top: 15px;
+  color: black;
+}
+.button-forget {
+  margin-top: 20px;
+  text-decoration: none;
+  color: gray;
+}
+.button-forget:hover {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #00bcd4;
+}
+
+.button-register {
+  display: block;
+  margin-top: 60px;
+  color: #00bcd4;
+  cursor: pointer;
+}
+/* Termina estilos de login */
+/* Empieza responsive  de login*/
+@media (min-width: 768px) {
+  .login-container,
+  .contraseña-container {
+    width: 100%;
+    max-width: 40%;
+    height: 90vh;
+    position: fixed;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-left: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  .fa-user {
+    font-size: 3vw;
+    position: absolute;
+    top: 10px;
+  }
+  h1 {
+    font-size: 2vw;
+    position: absolute;
+    top: 60px;
+  }
+  .paragraf {
+    color: black;
+    font-size: 16px;
+  }
+  #login-form {
+    position: absolute;
+    top: 120px;
+  }
+  .fa-google {
+    position: absolute;
+    left: 20px;
+    padding-top: 2px;
+    font-size: 16px;
+  }
+  .button-register {
+    margin-top: 40px;
+  }
+}
+/* Termina responsive de login */
+/* Empieza estilos SignUp */
+
+.container-input {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  border: 1px solid #e5e8e8;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f8f9f9;
+}
+.return {
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 50%;
+  max-width: 20%;
+  padding: 10px;
+  top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #00bcd4;
+}
+.img2 {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  object-fit: cover;
+}
+.title {
+  font-size: 9vw;
+  margin-top: 40px;
+  color: #cddc39;
+}
+.form-input {
+  margin-top: 20px;
+}
+
+#button-signup,
+.button-contraseña {
+  width: 100%;
+  max-width: 100%;
+  height: 6vh;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
+  background: #00bcd4;
+}
+/* Termina estilos de signup */
+/* Responsive  signup*/
+@media (min-width: 768px) {
+  .container-input {
+    width: 100%;
+    max-width: 40%;
+    height: 100vh;
+    position: fixed;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  .title {
+    font-size: 3vw;
+    margin-top: 60px;
+  }
+  input {
+    width: 300px;
+    height: 40px;
+  }
+}
+
+/*-------- Comienza estilo de feed------------*/
+
+.divTitle {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  background: #f8f9f9;
+  border-radius: 8px;
+}
+.type-post {
+  color: #cddc39;
+  font-size: 18px;
+  font-weight: bold;
+}
+.date-post {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+.post-content {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.user-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sectionPosts {
+  margin: 3%;
+  height: 100%;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.titleFeed {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #cddc39;
+}
+.individual-post {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #00bcd4;
+  border-radius: 6px;
+}
+
+/* i {
+  color: initial;
+} */
+
+.fa-regular.fa-heart.likeButton {
+  font-size: 25px;
+  color: #cddc39;
+}
+
+.fa-solid.fa-heart.likeButton {
+  font-size: 25px;
+  color: #cddc39;
+}
+
+.fa-regular.fa-heart.likeButton.liked {
+  color: #00bcd4;
+}
+
+.likeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  padding: 0 1px 3% 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+/* Empieza responsive  de feed*/
+@media (min-width: 768px) {
+  .divTitle {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    background: #f8f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 80px;
+  }
+}
+/* estilos del modal de delet */
+.dialog-modal {
+  margin: 200px auto;
+  background-color: #cddc39;
+  border-radius: 6px;
+  border: none;
+}
+.text-modal {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+.container-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.delete-button,
+.cancel-button {
+  border: 1px solid #00bcd4;
+  width: 60px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+.delete-button:hover {
+  background-color: #00bcd4;
+}
+.cancel-button:hover {
+  background-color: #00bcd4;
+}
+/* Termina estilos del modal */
+
+/* Estilos de la ventana de editar post */
+.editSection {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  border-radius: 6px;
+}
+.editSection textarea {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #cddc39;
+  border: none;
+}
+.editSection button {
+  max-width: 100px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 3px;
+  border: 2px solid #00bcd4;
+}
+.editSection button:hover {
+  background-color: #00bcd4;
+}
+
+/* --------------se termino estilos de ventana editar post----*/
+/* ---------Estilos de addPost ------------*/
+
+.sectionPosts select {
+  margin-left: 63%;
+  width: 100%;
+  max-width: 100px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #00bcd4;
+}
+
+.sizeButton {
+  width: 100%;
+  max-width: 100px;
+  height: 30px;
+  margin-left: 63%;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00bcd4;
+  cursor: pointer;
+}
+.textPost {
+  margin: 8px;
+  padding: 10px;
+  width: 95%;
+  height: 80px;
+  border: 1px solid #00bcd4;
+  font-size: 16px;
+  border-radius: 6px;
+  background: #e5e8e8;
+}
+
+/* ---------Estilos de resetPassword ------------*/
+.subtitle {
+  margin-bottom: 100px;
+  text-align: center;
+}
+.contraseña-container p {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*------------------ footer -------------------*/
+/*Provisional, previsualización de la barra de navegación*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  height: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+}
+
+.navigation-buttons {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 40%;
+    height: 10%;
+    border-radius: 10px;
+  }
+  .buttons-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* ---------------------------Estilos de Profile --------------------*/
+.profile-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  border: 1px solid #e5e8e8;
+  background: #f8f9f9;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-title {
+  position: absolute;
+  left: 0;
+  color: #cddc39;
+}
+.boton-signOut {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 100%;
+  max-width: 60px;
+  height: 5vh;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  cursor: pointer;
+}
+.img4 {
+  max-width: 130px;
+  margin-top: 80px;
+}
+.name-profile {
+  margin-top: 20px;
+  color: #cddc39;
+}
+.email {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background: transparent;
+}
+
+/* ---------Tamaño Desktop ----------- */
+@media (min-width: 768px) {
+  .profile-container {
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    border: 1px solid #e5e8e8;
+    background: #f8f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30%;
+  }
+  .profile-title {
+    position: absolute;
+    font-size: 1.8rem;
+    left: 0;
+    color: #cddc39;
+  }
+  .name-profile {
+    font-size: 1.5rem;
+  }
+}
+/* -----------Estilos de RecipesContainer----------*/
+.header-recipes {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.title-recipes {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  font-size: 1.8rem;
+  color: #cddc39;
+}
+.img5 {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  padding: 0 10% 0 10%;
+  object-fit: cover;
+}
+
+/* ---------Tamaño Desktop RecipesContainer ----------- */
+@media (min-width: 768px) {
+  .recipes-container {
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    border: 1px solid #e5e8e8;
+    background: #f8f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30%;
+  }
+}
+/* -----------Estilos de SectionWorkout----------*/
+.section-workout {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  border: 1px solid #e5e8e8;
+  background: #f8f9f9;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header-workout {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.title-workout {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  font-size: 1.8rem;
+  color: #cddc39;
+}
+.img6 {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  padding: 0 10% 0 10%;
+  object-fit: cover;
+}
+
+/* ---------Tamaño Desktop sectionWorkout ----------- */
+@media (min-width: 768px) {
+  .section-workout {
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    border: 1px solid #e5e8e8;
+    background: #f8f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30%;
+  }
+}
+
+/*------------toast style-----------------*/
+.toastContainer {
+  background-color: rgba(205, 220, 57, 0.6);
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-name: apertura;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  padding: 1px;
+}
+.singleToast {
+  margin: 5px;
+  padding: 5px;
+}
+.closeToastButton {
+  border-color: #00bcd4;
+  background-color: #f8f9f9;
+  color: black;
+}
+
+.toastContainer.cerrando {
+  animation-name: cierre;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.singleToast.cerrando {
+  animation-name: cierre;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apertura {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes cierre {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400%);
+  }
+}
