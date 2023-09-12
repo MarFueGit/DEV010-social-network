@@ -1,15 +1,13 @@
 import { fireEvent, getByTestId } from '@testing-library/dom';
 import login from '../../src/views/login';
 
+/*  se utiliza jest.fn() para crear funciones simuladas para loginWithGoogle y loginUser.Luego,
+se utiliza mockResolvedValue para especificar que estas funciones simuladas deben devolver una
+ promesa resuelta con los valores { name: 'marysela' } y undefined, respectivamente.
+*/
 jest.mock('../../src/lib/auth.js', () => ({
-  loginWithGoogle: () =>
-    new Promise((resolve) => {
-      resolve({ name: 'marysela' });
-    }),
-  loginUser: () =>
-    new Promise((resolve) => {
-      resolve(undefined);
-    }),
+  loginWithGoogle: jest.fn().mockResolvedValue({ name: 'marysela' }),
+  loginUser: jest.fn().mockResolvedValue(undefined),
 }));
 
 describe('view login', () => {

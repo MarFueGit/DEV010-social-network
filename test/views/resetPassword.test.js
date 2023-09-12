@@ -7,11 +7,10 @@ import resetPassword from '../../src/views/resetPassword';
   Despues retornamos una funcion con el mismo nombre de la funcion original signUpUser
   Por ultimo retornamos una promesa exitosa
 */
+// La función mockResolvedValuese utiliza en Jest para crear una función simulada (mock)
+// que devuelve una promesa resuelta con un valor específico.
 jest.mock('../../src/lib/auth.js', () => ({
-  resetPasswordUser: () =>
-    new Promise((resolve) => {
-      resolve(true);
-    }),
+  resetPasswordUser: jest.fn().mockResolvedValue(true),
 }));
 
 /*

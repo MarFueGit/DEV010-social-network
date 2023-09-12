@@ -6,7 +6,7 @@ beforeEach(() => {
 
 jest.mock('firebase/auth', () => ({
   signInWithEmailAndPassword: () =>
-    // Retornamos un error con throw para causar que entre en el cath
+    // Retornamos un error con throw para causar que entre en el cath,code es el mensaje descriptivo
     new Promise(() => {
       throw { code: true };
     }),

@@ -8,20 +8,14 @@ import signUp from '../../src/views/signUp';
   Por ultimo retornamos una promesa exitosa
 */
 jest.mock('../../src/lib/auth.js', () => ({
-  signUpUser: () =>
-    new Promise((resolve) => {
-      resolve({ name: 'marysela' });
-    }),
-  updateCurrentUser: () =>
-    new Promise((resolve) => {
-      resolve(true);
-    }),
+  signUpUser: jest.fn().mockResolvedValue({ name: 'marysela' }),
+  updateCurrentUser: jest.fn().mockResolvedValue(true),
 }));
-
 /*
 Realizamos el mock de la funcion alert
  */
 global.alert = jest.fn();
+global.console = { log: jest.fn() };
 
 describe('view signUp', () => {
   it('renderiza signUp', () => {

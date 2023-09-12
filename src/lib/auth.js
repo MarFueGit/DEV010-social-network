@@ -71,20 +71,13 @@ const loginWithGoogle = async () => {
     return undefined;
   }
 };
-const validateUserSession = (navigateTo) => {
+const validateUserSession = () => {
   // Detecta el estado de autentificación
   // Este observador de firebase nos sirve para validar si el usuario ya habia iniciado sesion
   // o ya se habia registrado, en este caso navegamos a feed.
   onAuthStateChanged(auth, (user) => {
     console.log('user:', user);
-    if (user) {
-      // que no mande siempre a feed con usuario loggeado
-      navigateTo('/feed');
-    } else {
-      // manda a login sin usuario loggeado en perfil
-      // alert('Please, sign in to the app');
-      navigateTo('/');
-    }
+    return user;
   });
 };
 

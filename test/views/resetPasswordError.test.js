@@ -8,10 +8,7 @@ import resetPassword from '../../src/views/resetPassword';
   Por ultimo retornamos una promesa exitosa
 */
 jest.mock('../../src/lib/auth.js', () => ({
-  resetPasswordUser: () =>
-    new Promise((resolve) => {
-      resolve(undefined);
-    }),
+  resetPasswordUser: jest.fn().mockResolvedValue(undefined),
 }));
 
 /*

@@ -1,4 +1,4 @@
-import { addDoc, collection, Timestamp } from 'firebase/firestore'; // falta  deleteDoc
+import { addDoc, collection } from 'firebase/firestore'; // falta  deleteDoc
 import { db, auth } from '../firebase.js';
 import toast from './toast.js';
 
@@ -14,7 +14,8 @@ function addPost() {
   const userID = user?.uid;
 
   const select = document.createElement('select'); // para seleccionar tipo de post
-  // select.placeholder = 'Choose one';
+  // Data tes id
+  select.setAttribute('data-testid', 'selectType');
   const placeholderOption = document.createElement('option'); // placeholder
   const option1 = document.createElement('option');
   placeholderOption.textContent = 'Type post';
@@ -38,11 +39,9 @@ function addPost() {
       if (select.selectedIndex === 0) {
         const content = 'Please select a type post';
         section.append(toast(content));
-        // alert('Please select a type post');
       } else {
         addDoc(colRef, {
-          // User: auth.currentUser.userValue,
-          Date: Timestamp.now(), // agrega la fecha de creación al doc
+          Date: new Date(), // agrega la fecha de creación al doc
           Content: textarea.value,
           Type: select.options[select.selectedIndex].text, // toma texto de la  opción seleccionada
           UserID: userID, // guarda el ID del usuario que escribió el post

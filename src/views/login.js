@@ -48,11 +48,13 @@ function login(navigateTo) {
   const loginForm = divContainer.querySelector('#login-form');
   const buttonGoogle = divContainer.querySelector('.button-google');
   const buttonForgetPassword = divContainer.querySelector('.button-forget');
-  buttonForgetPassword.addEventListener('click', () => {
+  buttonForgetPassword.addEventListener('click', (e) => {
+    e.preventDefault();
     navigateTo('/resetPassword');
   });
   const buttonRegister = divContainer.querySelector('.button-register');
-  buttonRegister.addEventListener('click', () => {
+  buttonRegister.addEventListener('click', (e) => {
+    e.preventDefault();
     navigateTo('/signUp');
   });
   // Flujo de inicio de sesion con google

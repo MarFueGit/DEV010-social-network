@@ -12,16 +12,16 @@ jest.mock('firebase/auth', () => {
     email: 'example@example.com',
   });
 
-  // container for attached callbacks and state variables
+  // contenedor de callbacks y variables de estado adjuntas
   const authChangeCallbacks = [];
   let authCurrentUserInfo = mockedUserInfo;
 
-  // invoke all callbacks with current data
+  // invocar todas las retrollamadas con los datos actuales
   const fireOnChangeCallbacks = () => {
     authInstance.currentUser = authCurrentUserInfo;
     authChangeCallbacks.forEach((cb) => {
       try {
-        cb(mockedUserInfo); // invoke any active listeners
+        cb(mockedUserInfo); // invocar a los oyentes activos
       } catch (err) {
         console.error('Error invoking callback', err);
       }
@@ -29,7 +29,7 @@ jest.mock('firebase/auth', () => {
   };
 
   authInstance.signOut = () => {
-    // signInWithX will look similar to this
+    // signInWithX tendrá un aspecto similar al siguiente
     authCurrentUserInfo = null;
     fireOnChangeCallbacks();
   };

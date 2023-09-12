@@ -1,4 +1,5 @@
 // file main.js finished
+import { onAuthStateChanged } from 'firebase/auth';
 import home from './views/home';
 import login from './views/login';
 import error from './views/error';
@@ -9,8 +10,9 @@ import resetPassword from './views/resetPassword';
 import recipes from './views/recipes';
 import workout from './views/workout';
 import profile from './views/profile';
-// import { validateUserSession } from './lib/auth';
 import navigationBar from './views/navigationBar';
+
+import { auth } from './firebase';
 
 /* -------------Navegación----------------------------------------*/
 
@@ -29,6 +31,8 @@ const routes = [
 
 const defaultRoute = '/';
 const root = document.getElementById('root');
+// variable user global
+let userGlobal;
 
 function navigateTo(hash) {
   const route = routes.find((routeFound) => routeFound.path === hash);
@@ -48,18 +52,26 @@ function navigateTo(hash) {
     //   root.removeChild(root.firstChild);
     // }
 
-    // Agrega la nueva ruta
-    root.appendChild(route.component(navigateTo));
+    // Agrega la nueva ruta, le pasa navigateTo y el usuario global
+    root.appendChild(route.component(navigateTo, userGlobal));
   } else {
     navigateTo('/error');
   }
 }
 
+// Observador de la sesion del usuario, obtenemos primero el usuario y despues navegamos en la app
+onAuthStateChanged(auth, (user) => {
+  console.log('user desde el observador:', user);
+  if (user) {
+    userGlobal = user;
+    navigateTo(window.location.pathname);
+  } else {
+    userGlobal = undefined;
+    navigateTo(defaultRoute);
+  }
+});
+
+// Inicia app
 window.onpopstate = () => {
   navigateTo(window.location.pathname);
 };
-
-navigateTo(window.location.pathname || defaultRoute);
-
-// Observador de la sesion del usuario
-// validateUserSession(navigateTo);

@@ -1,4 +1,3 @@
-// import { fireEvent, getByText } from '@testing-library/dom';
 import { fireEvent, getByText } from '@testing-library/dom';
 import navigationBar from '../../src/views/navigationBar';
 
@@ -39,37 +38,25 @@ describe('Navigation bar', () => {
     window.history.pushState({}, 'Test page', '/feed');
     const navigateTo = jest.fn();
     const container = navigationBar(navigateTo);
-    // const feedButton = getByText(container, 'Feed');
     const recipesButton = getByText(container, 'Recipes');
     const workoutButton = getByText(container, 'Workout');
     const profileButton = getByText(container, 'Profile');
     expect(container).not.toBeUndefined();
-    // expect(feedButton.style.color).toBe('#00bcd4');
     expect(recipesButton.style.color).toBe('black');
     expect(workoutButton.style.color).toBe('black');
     expect(profileButton.style.color).toBe('black');
-    // setTimeout(() => {
-    //   expect(button.style.color).toBe('#00bcd4');
-    //   done(); // Indica que la prueba ha terminado
-    // }, 10000);
   });
   it('Verifica cambios de estilo en ruta Recipes', () => {
     window.history.pushState({}, 'Test page', '/recipes');
     const navigateTo = jest.fn();
     const container = navigationBar(navigateTo);
     const feedButton = getByText(container, 'Feed');
-    // const recipesButton = getByText(container, 'Recipes');
     const workoutButton = getByText(container, 'Workout');
     const profileButton = getByText(container, 'Profile');
     expect(container).not.toBeUndefined();
     expect(feedButton.style.color).toBe('black');
-    // expect(recipesButton.style.color).toBe('#00bcd4');
     expect(workoutButton.style.color).toBe('black');
     expect(profileButton.style.color).toBe('black');
-    // setTimeout(() => {
-    //   expect(button.style.color).toBe('#00bcd4');
-    //   done(); // Indica que la prueba ha terminado
-    // }, 10000);
   });
   it('Verifica cambios de estilo en ruta Workout', () => {
     window.history.pushState({}, 'Test page', '/workout');
@@ -77,17 +64,11 @@ describe('Navigation bar', () => {
     const container = navigationBar(navigateTo);
     const feedButton = getByText(container, 'Feed');
     const recipesButton = getByText(container, 'Recipes');
-    // const workoutButton = getByText(container, 'Workout');
     const profileButton = getByText(container, 'Profile');
     expect(container).not.toBeUndefined();
     expect(feedButton.style.color).toBe('black');
     expect(recipesButton.style.color).toBe('black');
-    // expect(workoutButton.style.color).toBe('#00bcd4');
     expect(profileButton.style.color).toBe('black');
-    // setTimeout(() => {
-    //   expect(button.style.color).toBe('#00bcd4');
-    //   done(); // Indica que la prueba ha terminado
-    // }, 10000);
   });
   it('Verifica cambios de estilo en ruta Profile', () => {
     window.history.pushState({}, 'Test page', '/profile');
@@ -96,15 +77,9 @@ describe('Navigation bar', () => {
     const feedButton = getByText(container, 'Feed');
     const recipesButton = getByText(container, 'Recipes');
     const workoutButton = getByText(container, 'Workout');
-    // const profileButton = getByText(container, 'Profile');
     expect(container).not.toBeUndefined();
     expect(feedButton.style.color).toBe('black');
     expect(recipesButton.style.color).toBe('black');
     expect(workoutButton.style.color).toBe('black');
-    // expect(profileButton.style.color).toBe('#00bcd4');
-    // setTimeout(() => {
-    //   expect(button.style.color).toBe('#00bcd4');
-    //   done(); // Indica que la prueba ha terminado
-    // }, 10000);
   });
 });
