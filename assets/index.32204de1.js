@@ -7285,8 +7285,8 @@ function getAuth(app2 = getApp()) {
   return auth2;
 }
 registerAuth("Browser");
-const logoVitalHub$1 = "/https://marfuegit.github.io/DEV010-social-network/assets/logo-vitalhub.88034a38.png";
-const home2 = "/https://marfuegit.github.io/DEV010-social-network/assets/home2.fc0c2db8.png";
+const logoVitalHub$1 = "/DEV010-social-network/assets/logo-vitalhub.88034a38.png";
+const home2 = "/DEV010-social-network/assets/home2.fc0c2db8.png";
 function home(navigateTo2) {
   const homeContainer = document.createElement("div");
   homeContainer.classList.add("home-container");
@@ -7317,7 +7317,7 @@ function home(navigateTo2) {
   homeContainer.append(button, welcome, divImg, homeText, homeText2);
   return homeContainer;
 }
-const logoVitalHub = "/https://marfuegit.github.io/DEV010-social-network/assets/logo-vitalhub (1)2.205db80e.png";
+const logoVitalHub = "/DEV010-social-network/assets/logo-vitalhub (1)2.205db80e.png";
 var name = "firebase";
 var version = "10.2.0";
 /**
@@ -19633,7 +19633,7 @@ function filter(user, route) {
   }
   return fatherContainer;
 }
-const imagenReceta = "/https://marfuegit.github.io/DEV010-social-network/assets/imagenreceta.e7367429.png";
+const imagenReceta = "/DEV010-social-network/assets/imagenreceta.e7367429.png";
 function recipes(navigateTo2, user) {
   console.log("user desde recipes:", user);
   const recipesContainer = document.createElement("section");
@@ -19662,7 +19662,7 @@ function recipes(navigateTo2, user) {
   );
   return recipesContainer;
 }
-const imagenWorkout = "/https://marfuegit.github.io/DEV010-social-network/assets/imagenSinFondo.af4504a2.png";
+const imagenWorkout = "/DEV010-social-network/assets/imagenSinFondo.af4504a2.png";
 function workout(navigateTo2, user) {
   console.log("user desde workout:", user);
   const sectionWorkout = document.createElement("section");
