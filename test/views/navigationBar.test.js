@@ -35,7 +35,7 @@ describe('Navigation bar', () => {
     expect(container).not.toBeUndefined();
   });
   it('Verifica cambios de estilo en ruta Feed', () => {
-    window.history.pushState({}, 'Test page', '/feed');
+    window.history.pushState({}, 'Test page', '/feed'); // simula cambio de ruta de testpage a feed
     const navigateTo = jest.fn();
     const container = navigationBar(navigateTo);
     const recipesButton = getByText(container, 'Recipes');

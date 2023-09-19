@@ -43,6 +43,7 @@ const loginUser = async (email, password) => {
       email,
       password,
     );
+    localStorage.setItem('user', userCredential);
 
     return userCredential;
   } catch (error) {

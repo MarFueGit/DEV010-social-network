@@ -1,6 +1,8 @@
 import { signOutUser } from '../lib/auth';
 import navigationBar from './navigationBar';
 import filter from './filter';
+// Importamos las imagenes
+import logoVitalHub from '../assets/img/logo-vitalhub (1)2.png';
 
 function profile(navigateTo, user) {
   console.log('user desde profile', user);
@@ -15,7 +17,7 @@ function profile(navigateTo, user) {
   profileTitle.textContent = 'Profile';
   const img4 = document.createElement('img');
   img4.classList.add('img4');
-  img4.src = '../assets/img/logo-vitalhub (1)2.png';
+  img4.src = logoVitalHub;
   img4.alt = 'logo vitalHub';
   const botonSignOut = document.createElement('button');
   botonSignOut.classList.add('boton-signOut');

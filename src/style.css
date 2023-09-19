@@ -76,7 +76,7 @@ p {
 /* Responsive  Desktop*/
 @media (min-width: 768px) {
   body {
-    background-image: url('./assets/img/img-fondo\ \(1\).jpg');
+    background-image: url('https://www.dianadonatvargas.com/wp-content/uploads/2021/04/alimentacion-1024x683-1160x665.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -192,16 +192,16 @@ input {
   font-size: 16px;
 }
 .fa-google:hover {
-  color: black;
+  color:  #839192;
 }
 .paragraf {
   margin-top: 15px;
-  color: black;
+  color:  #839192;
 }
 .button-forget {
   margin-top: 20px;
   text-decoration: none;
-  color: gray;
+  color:  #839192;
 }
 .button-forget:hover {
   margin-top: 20px;
@@ -242,7 +242,7 @@ input {
     top: 60px;
   }
   .paragraf {
-    color: black;
+    color:  #839192;
     font-size: 16px;
   }
   #login-form {
@@ -359,12 +359,12 @@ input {
   font-weight: bold;
 }
 .date-post {
-  color: black;
+  color:  #839192;
   font-size: 16px;
   font-weight: 400;
 }
 .post-content {
-  color: black;
+  color:  #839192;
   font-size: 16px;
   font-weight: bold;
 }
@@ -449,7 +449,7 @@ input {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #000;
+  color:  #839192;
 }
 .container-buttons {
   display: flex;
@@ -568,6 +568,9 @@ footer {
   border: transparent;
   cursor: pointer;
 }
+.feedButton{
+  letter-spacing: 5px;
+}
 
 @media (min-width: 768px) {
   footer {
@@ -636,7 +639,7 @@ footer {
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid  #839192;
   text-align: center;
   background: transparent;
 }
@@ -785,7 +788,7 @@ footer {
 .closeToastButton {
   border-color: #00bcd4;
   background-color: #f8f9f9;
-  color: black;
+  color:  #839192;
 }
 
 .toastContainer.cerrando {

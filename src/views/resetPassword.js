@@ -1,3 +1,6 @@
+// Importamos las imagenes
+import logoVitalHub from '../assets/img/logo-vitalhub (1)2.png';
+
 import { resetPasswordUser } from '../lib/auth';
 
 function resetPassword(navigateTo) {
@@ -5,7 +8,7 @@ function resetPassword(navigateTo) {
   contraseñaContainer.classList.add('contraseña-container');
   const img = document.createElement('img');
   img.classList.add('img1');
-  img.src = '../assets/img/logo-vitalhub (1)2.png';
+  img.src = logoVitalHub;
   img.alt = 'logo vitalHub';
   contraseñaContainer.appendChild(img);
   const subtitle = document.createElement('p');

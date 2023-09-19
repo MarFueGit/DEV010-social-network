@@ -1,3 +1,5 @@
+// Importamos las imagenes
+import logoVitalHub from '../assets/img/logo-vitalhub (1)2.png';
 import { signUpUser, updateCurrentUser } from '../lib/auth';
 
 function signUp(navigateTo) {
@@ -7,7 +9,7 @@ function signUp(navigateTo) {
     <button class="return">Back</button>
     <img
     class="img2"
-        src="../assets/img/logo-vitalhub (1)2.png" 
+        src="${logoVitalHub}" 
         alt="imagen logo red social"
         />
         <h2 class="title">Welcome!</h2>

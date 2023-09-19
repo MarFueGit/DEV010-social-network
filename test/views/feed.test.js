@@ -6,7 +6,8 @@ import {
 } from '@testing-library/dom';
 import feed from '../../src/views/feed';
 
-beforeAll(() => { // mock del diálogo
+beforeAll(() => {
+  // mock del diálogo
   HTMLDialogElement.prototype.showModal = jest.fn();
   HTMLDialogElement.prototype.close = jest.fn();
 });

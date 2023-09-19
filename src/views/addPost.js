@@ -14,12 +14,10 @@ function addPost() {
   const userID = user?.uid;
 
   const select = document.createElement('select'); // para seleccionar tipo de post
-  // Data tes id
   select.setAttribute('data-testid', 'selectType');
   const placeholderOption = document.createElement('option'); // placeholder
   const option1 = document.createElement('option');
   placeholderOption.textContent = 'Type post';
-  // placeholderOption.disabled = true;
   option1.textContent = 'Recipe';
   option1.value = 'Recipe';
   const option2 = document.createElement('option');

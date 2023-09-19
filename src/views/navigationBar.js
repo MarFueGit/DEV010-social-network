@@ -43,22 +43,14 @@ function navigationBar(navigateTo) {
     feedButton.style.fontSize = '1rem';
     feedButton.innerHTML = '<b>Feed</b>';
     recipesButton.style.color = 'black';
-    // recipesButton.style.fontSize = '1rem';
-    // recipesButton.style.fontWeight = 'bold';
     workoutButton.style.color = 'black';
-    // workoutButton.style.fontWeight = 'bold';
-    // workoutButton.style.fontSize = '1rem';
     profileButton.style.color = 'black';
-    // profileButton.style.fontWeight = 'bold';
-    // profileButton.style.fontSize = '1rem';
   } else if (window.location.pathname === '/recipes') {
     feedButton.style.color = 'black';
-    // feedButton.style.fontSize = '1rem';
     recipesButton.style.color = '#00bcd4';
     recipesButton.style.fontSize = '1rem';
     recipesButton.innerHTML = '<b>Recipes</b>';
     workoutButton.style.color = 'black';
-    // workoutButton.style.fontSize = '1rem';
     profileButton.style.color = 'black';
   } else if (window.location.pathname === '/workout') {
     feedButton.style.color = 'black';
@@ -66,7 +58,6 @@ function navigationBar(navigateTo) {
     workoutButton.style.color = '#00bcd4';
     workoutButton.style.fontSize = '1rem';
     workoutButton.innerHTML = '<b>Workout</b>';
-    // workoutButton.style.fontSize = '1rem';
     profileButton.style.color = 'black';
   } else if (window.location.pathname === '/profile') {
     feedButton.style.color = 'black';
@@ -74,7 +65,7 @@ function navigationBar(navigateTo) {
     workoutButton.style.color = 'black';
     profileButton.style.color = '#00bcd4';
     profileButton.style.fontSize = '1rem';
-    profileButton.innerHTML = '<b>Profile</b>';
+    profileButton.innerHTML = '<b>👤Profile</b>';
   }
 
   barContainer.append(feedButton, recipesButton, workoutButton, profileButton);

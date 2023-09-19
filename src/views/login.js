@@ -1,4 +1,5 @@
-// file login finished
+// importamos las imagenes
+import logoVitalHub from '../assets/img/logo-vitalhub (1)2.png';
 import { loginUser, loginWithGoogle } from '../lib/auth';
 
 function login(navigateTo) {
@@ -7,7 +8,7 @@ function login(navigateTo) {
   divContainer.innerHTML = `
   <img
     class="img1"
-        src="../assets/img/logo-vitalhub (1)2.png" 
+        src="${logoVitalHub}" 
         alt="imagen logo red social"
         />
     <form id="login-form" data-testid="form-input">
@@ -38,10 +39,6 @@ function login(navigateTo) {
   invocamos a divContainer en lugar de document, por que el divContainer aun no existe en el DOM
   Existira en el DOM hasta que retornemos divContainer
   */
-  // const img = document.createElement('img');
-  // img.classList.add('img1');
-  // img.src = '../assets/img/logo-vitalhub (1).png';
-  // img.alt = 'logoVitalHub';
 
   const email = divContainer.querySelector('input[name="email"]');
   const password = divContainer.querySelector('input[name="password"]');

@@ -18,6 +18,7 @@
     "test": "jest --coverage",
     "dev": "vite dev src",
     "start": "npm run dev",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -46,7 +47,8 @@
     "commit": "3cf716dfe2a8c328a7e9dce5c030cb2c3ab8531c"
   },
   "dependencies": {
-    "firebase": "^10.2.0"
+    "firebase": "^10.2.0",
+    "gh-pages": "^6.0.0"
   },
   "prettier": {
     "singleQuote": true,
@@ -54,6 +56,10 @@
     "trailingComma": "all"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/mocks/fileMock.js"
+    }
   }
 }

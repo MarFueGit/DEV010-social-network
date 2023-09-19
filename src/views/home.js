@@ -1,9 +1,13 @@
+// Importamos las imagenes
+import logoVitalHub from '../assets/img/logo-vitalhub.png';
+import home2 from '../assets/img/home2.png';
+
 function home(navigateTo) {
   const homeContainer = document.createElement('div');
   homeContainer.classList.add('home-container');
   const img3 = document.createElement('img');
   img3.classList.add('img3');
-  img3.src = '../assets/img/logo-vitalhub.png';
+  img3.src = logoVitalHub;
   img3.alt = 'logo vitalHub';
   homeContainer.appendChild(img3);
   const button = document.createElement('button');
@@ -19,7 +23,7 @@ function home(navigateTo) {
   const divImg = document.createElement('div');
   const img = document.createElement('img');
   img.classList.add('img');
-  img.src = '../assets/img/home2.png';
+  img.src = home2;
   img.alt = 'imagen entrenando-azul';
 
   const homeText = document.createElement('h3');
