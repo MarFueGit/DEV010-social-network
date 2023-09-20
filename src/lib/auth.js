@@ -77,6 +77,15 @@ const validateUserSession = () => {
   // Este observador de firebase nos sirve para validar si el usuario ya habia iniciado sesion
   // o ya se habia registrado, en este caso navegamos a feed.
   onAuthStateChanged(auth, (user) => {
+    // const currentUser = localStorage.getItem('user');
+    // const path = window.location.pathname;
+    // if (user) {
+    //   if (currentUser && path === '/feed') {
+    //     navigateTo('/feed');
+    //   } else if (currentUser && path === '/profile') {
+    //     navigateTo('/profile');
+    //   }
+    // }
     console.log('user:', user);
     return user;
   });
@@ -99,6 +108,7 @@ const signOutUser = async () => {
 
   try {
     // función para cierre de sesión, no testeada aún
+    localStorage.clear();
     return await signOut(auth);
   } catch (error) {
     return alert('Something wrong happened, please try again.');
